@@ -1,551 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Insurance Agent</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santa Bahadur Tamang - Professional Life Insurance Agent</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Custom css-->
+    <link rel="stylesheet" href="css/main.css" />
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Santa Agency</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#policies">Policies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <div class="theme-toggle ms-3">
-                    <i class="fas fa-moon d-none"></i>
-                    <i class="fas fa-sun"></i>
-                </div>
-            </div>
+    <!-- Header with Contact Info -->
+    <div class="header-top">
+      <div class="container header-container">
+        <div class="header-name">Santa Bahadur Tamang Agency</div>
+        <div class="header-contact">
+          <a href="tel:+9779841234567" class="contact-link">
+            <i class="fas fa-phone-alt"></i> +977 9841234567
+          </a>
+          <a href="https://wa.me/9779841234567" class="contact-link whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="mailto:santa@insurance.com" class="contact-link email">
+            <i class="fas fa-envelope"></i> santa@insurance.com
+          </a>
         </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <ul class="nav-menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#why-insurance">Why Insurance</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <i class="fas fa-moon dark-icon"></i>
+            <i class="fas fa-sun light-icon"></i>
+          </button>
+          <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h1 class="large-text" id="moving-text">Protecting Your Family's <span class="text-primary">Future</span></h1>
-                    <h2>Nepal Life Insurance / National Life Insurance Agent</h2>
-                    <p>With over 15 years of experience helping families secure their financial future through comprehensive life insurance solutions.</p>
-                    <div class="mt-4">
-                        <a href="#contact" class="btn btn-primary btn-lg me-3">Free Consultation</a>
-                        <a href="#policies" class="btn btn-outline-secondary btn-lg">View Policies</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 hero-img">
-                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Insurance Agent" class="img-fluid rounded">
-                </div>
-            </div>
+    <section id="home" class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>Secure Your Family's Future with Trusted Life Insurance</h1>
+          <p>
+            With 15 years of dedicated service, I've helped over 2,500 families
+            in Nepal find peace of mind through comprehensive life insurance
+            solutions tailored to their unique needs.
+          </p>
+          <a href="#contact" class="cta-button">Book Free Consultation</a>
         </div>
-    </section>
-
-    <!-- Trust Badges -->
-    <section class="trust-badges py-4">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-2 col-4">
-                    <img src="images/Agent.jpg" alt="Agent" class="img-fluid trust-badge-img">
-                </div>
-                <div class="col-md-2 col-4">
-                    <img src="images/Happy.webp" alt="Happy" class="img-fluid trust-badge-img">
-                </div>
-                <div class="col-md-2 col-4">
-                    <img src="images/Protect Family.jpg" alt="PRotect Family" class="img-fluid trust-badge-img">
-                </div>
-                <div class="col-md-2 col-4">
-                    <img src="images/Insurence.jpg" alt="Insurence" class="img-fluid trust-badge-img">
-                </div>
-                <div class="col-md-2 col-4">
-                    <img src="images/Health.jpg" alt="healthy Family" class="img-fluid trust-badge-img">
-                </div>
-                <div class="col-md-2 col-4">
-                    <img src="images/Travel.jpg" alt="Travel" class="img-fluid trust-badge-img">
-                </div>
-            </div>
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Happy family protected by insurance"
+          />
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-bg">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-                <p>Your Trusted Life Insurance Advisor</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <img src="https://res.cloudinary.com/dvkwkexk5/image/upload/v1744973497/Profile_tcwn1y.png" class="img-fluid rounded" alt="About me">
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="subtitle">
+          Licensed Life Insurance Advisor with 15+ Years of Protecting Nepalese
+          Families
+        </p>
+
+        <div class="about-container">
+          <div class="about-text">
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-user-tie"></i>
+                <div>
+                  <h3>Professional Expertise</h3>
+                  <p>
+                    Fully licensed and certified with extensive training in all
+                    major insurance products
+                  </p>
                 </div>
-                <div class="col-lg-8 pt-4 pt-lg-0 content">
-                    <h3>Helping Families Secure Their Future Since 2008</h3>
-                    <p class="fst-italic">
-                        My mission is to provide personalized life insurance solutions that give you peace of mind.
-                    </p>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="fas fa-chevron-right"></i> <strong>Years Experience:</strong> <span>15+</span></li>
-                                <li><i class="fas fa-chevron-right"></i> <strong>Clients Served:</strong> <span>1,200+</span></li>
-                                <li><i class="fas fa-chevron-right"></i> <strong>Specializations:</strong> <span>Term Life Insurence and Non Life Insurence</span></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="fas fa-chevron-right"></i> <strong>Licensed In:</strong> <span>All Over Nepal</span></li>
-                                <li><i class="fas fa-chevron-right"></i> <strong>Education:</strong> <span>Bachelor Degree</span></li>
-                                <li><i class="fas fa-chevron-right"></i> <strong>Awards:</strong> <span>2011-2012, 2014-2015, 2018-2022, 2022-2024 Best Of Years</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                        After seeing firsthand how life insurance saved my own family from financial hardship, I dedicated my career to helping others achieve the same security. I work with top-rated carriers to find the perfect policy for your unique needs and budget.
-                    </p>
-                    <div class="signature mt-4">
-                        <img src="https://res.cloudinary.com/dvkwkexk5/image/upload/v1744973496/Signature_kt6r8a.png" alt="Signature" class="img-fluid">
-                        <p class="mt-2">Santa Bahadur Tamang<br>Licensed in Nepal Life Insurance, National Life Insurence and Meta Life Insurence Agent</p>
-                    </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-hand-holding-heart"></i>
+                <div>
+                  <h3>Client-Centered Approach</h3>
+                  <p>
+                    Personalized service focused on your family's specific needs
+                    and budget
+                  </p>
                 </div>
+              </div>
             </div>
+
+            <p class="main-text">
+              As a dedicated life insurance professional serving Nepal for over
+              15 years, I've made it my mission to help families secure their
+              financial futures. With expertise in both traditional and modern
+              insurance products, I guide clients through the often-confusing
+              world of insurance to find solutions that provide real protection
+              without straining budgets.
+            </p>
+
+            <p class="main-text">
+              What sets me apart is my commitment to education - I ensure every
+              client fully understands their coverage options and makes informed
+              decisions. My 2,500+ satisfied clients across Nepal are a
+              testament to my personalized approach and deep knowledge of the
+              insurance landscape.
+            </p>
+
+            <div class="stats">
+              <div class="stat-item">
+                <span class="number">15+</span>
+                <span class="label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">2,500+</span>
+                <span class="label">Families Protected</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">100+</span>
+                <span class="label">Policies Per Year</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">24/7</span>
+                <span class="label">Client Support</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Santa Bahadur Tamang, Professional Insurance Advisor"
+            />
+            <div class="experience-badge">
+              <span>15+</span>
+              <small>Years</small>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Why Insurance Section -->
+    <section id="why-insurance" class="why-insurance">
+      <div class="container">
+        <h2 class="section-title">Why Life Insurance Matters</h2>
+        <div class="message-box">
+          <p>
+            "Invest 20 minutes today to secure your family's tomorrow - because
+            love means planning ahead."
+          </p>
+        </div>
+
+        <div class="reasons">
+          <div class="reason-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Financial Security</h3>
+            <p>
+              Ensure your family maintains their standard of living even in your
+              absence. Life insurance provides the funds to cover daily
+              expenses, debts, and future needs.
+            </p>
+          </div>
+          <div class="reason-card">
+            <i class="fas fa-home"></i>
+            <h3>Home Protection</h3>
+            <p>
+              Keep your family in their home by covering mortgage payments.
+              Prevent the stress of relocation during difficult times.
+            </p>
+          </div>
+          <div class="reason-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Education Assurance</h3>
+            <p>
+              Guarantee your children's education continues uninterrupted, with
+              funds set aside specifically for school fees and expenses.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Services</h2>
-                <p>How I Can Help You</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <h4>Needs Analysis</h4>
-                        <p>Comprehensive evaluation of your financial situation to determine exactly how much coverage you need.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-search-dollar"></i>
-                        </div>
-                        <h4>Policy Comparison</h4>
-                        <p>I shop multiple top-rated carriers to find you the best coverage at the most competitive rates.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-hand-holding-usd"></i>
-                        </div>
-                        <h4>Claims Assistance</h4>
-                        <p>Guidance and support for beneficiaries when it's time to file a claim.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <h4>Policy Reviews</h4>
-                        <p>Annual checkups to ensure your coverage still meets your needs as life changes.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h4>Estate Planning</h4>
-                        <p>Coordinating with your legal team to integrate life insurance into your estate plan.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-business-time"></i>
-                        </div>
-                        <h4>Business Protection</h4>
-                        <p>Key person insurance, buy-sell agreements, and executive benefits for businesses.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="container">
+        <h2 class="section-title">Insurance Solutions</h2>
+        <p class="subtitle">
+          Comprehensive coverage options designed for Nepalese families at every
+          life stage
+        </p>
 
-    <!-- Policy Types Section -->
-    <section id="policies" class="policies section-bg">
-        <div class="container">
-            <div class="section-title">
-                <h2>Policy Types</h2>
-                <p>Find the Right Coverage for You</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="policy-card">
-                        <div class="policy-header">
-                            <h4>Term Life Insurance</h4>
-                            <div class="price"><span>From</span> 1500 Rs/First Time</div>
-                        </div>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Affordable temporary coverage</li>
-                            <li><i class="fas fa-check"></i> 10-30 year terms available</li>
-                            <li><i class="fas fa-check"></i> Convertible to permanent</li>
-                            <li><i class="fas fa-check"></i> Ideal for mortgages/loans</li>
-                        </ul>
-                        <a href="#contact" class="btn-get-started">Get Quote</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="policy-card featured">
-                        <div class="policy-header">
-                            <h4>Whole Life Insurance</h4>
-                            <div class="price"><span>From</span> 2500 Rs/First Time</div>
-                        </div>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Lifetime protection</li>
-                            <li><i class="fas fa-check"></i> Fixed premiums</li>
-                            <li><i class="fas fa-check"></i> Cash value accumulation</li>
-                            <li><i class="fas fa-check"></i> Dividend potential</li>
-                        </ul>
-                        <a href="#contact" class="btn-get-started">Get Quote</a>
-                        <div class="featured-badge">Most Popular</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="policy-card">
-                        <div class="policy-header">
-                            <h4>Universal Life Insurance</h4>
-                            <div class="price"><span>From</span> 3500 Rs/First Time</div>
-                        </div>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Flexible premiums</li>
-                            <li><i class="fas fa-check"></i> Adjustable death benefit</li>
-                            <li><i class="fas fa-check"></i> Cash value growth</li>
-                            <li><i class="fas fa-check"></i> Tax advantages</li>
-                        </ul>
-                        <a href="#contact" class="btn-get-started">Get Quote</a>
-                    </div>
-                </div>
-            </div>
+        <div class="service-cards">
+          <div class="service-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Term Life Insurance</h3>
+            <p>
+              Affordable protection for 10-30 years. Ideal for young families
+              needing maximum coverage at minimum cost during critical years.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Whole Life Plans</h3>
+            <p>
+              Permanent coverage that builds cash value over time. Combines
+              lifelong protection with a savings component.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-umbrella"></i>
+            <h3>Universal Coverage</h3>
+            <p>
+              Flexible premiums and adjustable benefits to adapt as your needs
+              change throughout different life stages.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-procedures"></i>
+            <h3>Critical Illness</h3>
+            <p>
+              Lump-sum payment upon diagnosis of serious conditions, providing
+              financial support during treatment and recovery.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-rupee-sign"></i>
+            <h3>Retirement Plans</h3>
+            <p>
+              Structured savings solutions that guarantee income in your golden
+              years, with options for lump-sum or monthly payments.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Business Protection</h3>
+            <p>
+              Specialized coverage for business owners, including key person
+              insurance and buy-sell agreement funding.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>What My Clients Say</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Mr. Santa the process so easy. He explained everything clearly and found me a policy that fit my budget while providing the coverage my family needs."</p>
-                        <div class="client-info">
-                            <img src="images/T3.jpg" alt="Client" class="img-fluid rounded-circle">
-                            <h5>Sarah Johnson</h5>
-                            <p>Teacher, Age 34</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"After my husband passed, Mr. Santa helped me navigate the claims process with compassion. The benefit allowed me to stay in our home."</p>
-                        <div class="client-info">
-                            <img src="images/T1.jpg" alt="Client" class="img-fluid rounded-circle">
-                            <h5>Margaret Williams</h5>
-                            <p>Retired, Age 62</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"As a small business owner, Mr. Santa helped set up key person insurance that protects my company. His expertise was invaluable."</p>
-                        <div class="client-info">
-                            <img src="images/T2.jpg" alt="Client" class="img-fluid rounded-circle">
-                            <h5>Michael Chen</h5>
-                            <p>Business Owner, Age 45</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="container">
+        <h2 class="section-title">Client Experiences</h2>
+        <p class="subtitle">What families say about working with me</p>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq section-bg">
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-                <p>Common Questions About Life Insurance</p>
-            </div>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                            How much life insurance do I need?
-                        </button>
-                    </h3>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            The amount of coverage you need depends on your income, debts, future expenses like college tuition, and your family's lifestyle. A good rule of thumb is 10-12 times your annual income, but we'll do a detailed needs analysis to determine the right amount for your situation.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                            What's the difference between term and whole life?
-                        </button>
-                    </h3>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Term life provides coverage for a specific period (10-30 years) at a fixed premium. It's more affordable but has no cash value. Whole life provides lifelong coverage with premiums that never increase and builds cash value over time. The right choice depends on your budget and long-term goals.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                            Is the medical exam required?
-                        </button>
-                    </h3>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Many policies require a simple medical exam (height, weight, blood pressure, blood/urine sample), but we also offer no-exam policies with accelerated underwriting. The exam helps secure the best rates for healthy individuals.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                            Can I get coverage if I have health issues?
-                        </button>
-                    </h3>
-                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes! While pre-existing conditions may affect your rates, many carriers offer coverage options for various health situations. I work with multiple insurers to find the best solution for clients with health challenges.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                            How long does it take to get approved?
-                        </button>
-                    </h3>
-                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Simplified issue policies can provide instant approval, while fully underwritten policies typically take 2-6 weeks depending on medical records and exam scheduling. I'll guide you through every step to make the process as quick and smooth as possible.
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="testimonial-slider">
+          <div class="testimonial active">
+            <p>
+              After my husband passed unexpectedly, Santa's guidance with our
+              life insurance policy was a lifeline. The claim process was
+              handled with such care and efficiency, allowing me to focus on my
+              children during our difficult time. The financial security he
+              helped us put in place has been invaluable.
+            </p>
+            <div class="client">- Sita Sharma, Kathmandu</div>
+          </div>
+          <div class="testimonial">
+            <p>
+              As a small business owner, I needed complex coverage that would
+              protect both my family and my company. Santa explained all options
+              clearly in Nepali and helped design a perfect solution. Three
+              years later, I still appreciate his quarterly check-ins to review
+              our coverage as our business grows.
+            </p>
+            <div class="client">- Rajesh Thapa, Pokhara</div>
+          </div>
+          <div class="testimonial">
+            <p>
+              We put off getting insurance for years, thinking it was too
+              expensive. Santa showed us affordable options we didn't know
+              existed. His patience in answering all our questions (and we had
+              many!) gave us confidence in our decision. Now we have peace of
+              mind knowing our children's future is protected.
+            </p>
+            <div class="client">- Gita & Amit Gurung, Chitwan</div>
+          </div>
+          <div class="slider-controls">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
         </div>
-    </section>
-    
-
-    <!-- CTA Section -->
-    <section class="cta"> 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h3>Ready to Protect Your Loved Ones?</h3>
-                    <p>Get a free, no-obligation quote today. It only takes 2 minutes!</p>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="#contact" class="btn btn-primary btn-lg">Get My Free Quote</a>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Me</h2>
-                <p>Get in Touch</p>
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="subtitle">
+          Ready to discuss your family's protection? I offer free, no-obligation
+          consultations to help you understand your options.
+        </p>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Call Me</h3>
+                <p>+977 9841234567</p>
+                <p>Sunday-Friday: 9AM - 6PM</p>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-lg-5 d-flex align-items-stretch">
-                    <div class="info">
-                        <div class="address">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h4>Location:</h4>
-                            <p>Sunsari, Koshi, Nepal</p>
-                        </div>
-                        <div class="email">
-                            <i class="fas fa-envelope"></i>
-                            <h4>Email:</h4>
-                            <p>Santa@nepallife.com, Santa@nationallife.com</p>
-                        </div>
-                        <div class="phone">
-                            <i class="fas fa-phone-alt"></i>
-                            <h4>Call:</h4>
-                            <p>+(977) 9812141250</p>
-                        </div>
-                        <div class="hours">
-                            <i class="fas fa-clock"></i>
-                            <h4>Hours:</h4>
-                            <p>Sun-Fri: 8AM - 6PM<br>Sun: Closed<br>24/7 online</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                    <form action="#" method="post" class="php-email-form">
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="name">Your Name</label>
-                                <input type="text" name="name" class="form-control" id="name" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="email">Your Email</label>
-                                <input type="email" class="form-control" name="email" id="email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" name="phone" id="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="dob">Date of Birth</label>
-                            <input type="date" class="form-control" name="dob" id="dob" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="coverage">Coverage Interest</label>
-                            <select class="form-control" name="coverage" id="coverage">
-                                <option value="">Select Policy Type</option>
-                                <option value="term">Term Life Insurance</option>
-                                <option value="whole">Whole Life Insurance</option>
-                                <option value="universal">Universal Life Insurance</option>
-                                <option value="notsure">I'm Not Sure</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="amount">Desired Coverage Amount</label>
-                            <select class="form-control" name="amount" id="amount">
-                                <option value="">Select Amount</option>
-                                <option value="100k">$100,000</option>
-                                <option value="250k">$250,000</option>
-                                <option value="500k">$500,000</option>
-                                <option value="1m">$1,000,000</option>
-                                <option value="other">Other Amount</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Additional Information</label>
-                            <textarea class="form-control" name="message" rows="3"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit">Get My Free Quote</button>
-                        </div>
-                        <div class="disclaimer mt-3">
-                            <small>By submitting this form, you agree to be contacted by a licensed insurance agent. Your information will not be sold to third parties.</small>
-                        </div>
-                    </form>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>santa@insurance.com</p>
+                <p>Response within 24 hours</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Office</h3>
+                <p>Insurance Tower, 3rd Floor</p>
+                <p>New Baneshwor, Kathmandu</p>
+                <p>By appointment only</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <h3>WhatsApp</h3>
+                <p>+977 9841234567</p>
+                <p>Quick answers to simple questions</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="Your Phone Number" />
+            </div>
+            <div class="form-group">
+              <label for="message">How Can I Help You?</label>
+              <textarea
+                id="message"
+                placeholder="Tell me about your insurance needs..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+          </form>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h4>Santa Bahadur Tamang Agent</h4>
-                    <p>Helping families secure their financial future through comprehensive life insurance solutions.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><a href="#about">About Me</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#policies">Policies</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-6">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Disclosures</a></li>
-                        <li><a href="#">Licensing</a></li>
-                    </ul>
-                </div>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <h3>Santa Bahadur Tamang</h3>
+            <p class="footer-description">
+              Your trusted life insurance advisor in Nepal, committed to helping
+              families secure their financial futures through personalized
+              insurance solutions since 2008.
+            </p>
+            <div class="social-icons" style="margin-top: 1.5rem">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-viber"></i></a>
             </div>
-            <div class="copyright mt-4">
-                <p>&copy; 2024 - <span id="year"></span> www.santatamang.com.np. All rights reserved.</p>
-                <p class="disclaimer">Santa Bahadur Tamang is a life insurance agent in Nepal. This website is for informational purposes only and does not constitute an offer to sell insurance products. Policy approvals are subject to underwriting guidelines.</p>
-            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#why-insurance">Why Insurance</a></li>
+              <li><a href="#services">Insurance Solutions</a></li>
+              <li><a href="#testimonials">Client Stories</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Insurance Types</h3>
+            <ul>
+              <li><a href="#">Term Life</a></li>
+              <li><a href="#">Whole Life</a></li>
+              <li><a href="#">Universal Life</a></li>
+              <li><a href="#">Critical Illness</a></li>
+              <li><a href="#">Retirement Plans</a></li>
+              <li><a href="#">Business Insurance</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Insurance Calculator</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Claims Process</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="year"></span> Santa Bahadur Tamang Insurance
+            Agency. All rights reserved. Insurance products are offered through
+            licensed providers. Registration No: INS-NP-2008-04567
+          </p>
+        </div>
+      </div>
     </footer>
-
-        <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="btn btn-primary rounded-circle">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
     <script src="js/main.js"></script>
-</body>
-</html>`
+  </body> 
