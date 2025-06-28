@@ -206,71 +206,86 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Open first FAQ by default
-  if (faqItems.length > 0) {
-    faqItems[0].classList.add("active");
-  }
-});
+  // Scroll to Top Button Functionality
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-// Scroll to Top Button Functionality
-
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-// Show/hide button based on scroll position
-window.addEventListener("scroll", function () {
-  if (window.pageYOffset > 300) {
-    scrollToTopBtn.classList.add("visible");
-  } else {
-    scrollToTopBtn.classList.remove("visible");
-  }
-});
-
-// Smooth scroll to top when clicked
-scrollToTopBtn.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
+  // Show/hide button based on scroll position
+  window.addEventListener("scroll", function () {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("visible");
+    } else {
+      scrollToTopBtn.classList.remove("visible");
+    }
   });
-});
 
-
+  // Smooth scroll to top when clicked
+  scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 
   // Language Switcher Functionality
-        const langButtons = document.querySelectorAll('.lang-btn');
-        const elementsToTranslate = document.querySelectorAll('[data-en], [data-np]');
-        
-        // Set initial language (default to English)
-        let currentLang = localStorage.getItem('language') || 'en';
-        updateActiveLangButton();
-        translatePage(currentLang);
-        
-        // Add click event to language buttons
-        langButtons.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                if (lang !== currentLang) {
-                    currentLang = lang;
-                    localStorage.setItem('language', lang);
-                    updateActiveLangButton();
-                    translatePage(lang);
-                }
-            });
-        });
-        
-        function updateActiveLangButton() {
-            langButtons.forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('data-lang') === currentLang) {
-                    btn.classList.add('active');
-                }
-            });
+  const langButtons = document.querySelectorAll('.lang-btn');
+  const elementsToTranslate = document.querySelectorAll('[data-en], [data-np]');
+  
+  // Set initial language (default to English)
+  let currentLang = localStorage.getItem('language') || 'en';
+  updateActiveLangButton();
+  translatePage(currentLang);
+  
+  // Add click event to language buttons
+  langButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+          const lang = this.getAttribute('data-lang');
+          if (lang !== currentLang) {
+              currentLang = lang;
+              localStorage.setItem('language', lang);
+              updateActiveLangButton();
+              translatePage(lang);
+          }
+      });
+  });
+  
+  function updateActiveLangButton() {
+      langButtons.forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.getAttribute('data-lang') === currentLang) {
+              btn.classList.add('active');
+          }
+      });
+  }
+  
+  function translatePage(lang) {
+      elementsToTranslate.forEach(element => {
+          const translation = element.getAttribute(`data-${lang}`);
+          if (translation) {
+              element.textContent = translation;
+          }
+      });
+  }
+
+  // Animation on scroll
+  const animateElements = document.querySelectorAll('.animate__animated');
+  
+  function checkScroll() {
+    animateElements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementTop < windowHeight - 100) {
+        const animationClass = Array.from(element.classList).find(cls => cls.startsWith('animate__'));
+        if (animationClass && !element.classList.contains('animate__faster')) {
+          element.classList.add('animate__faster');
         }
-        
-        function translatePage(lang) {
-            elementsToTranslate.forEach(element => {
-                const translation = element.getAttribute(`data-${lang}`);
-                if (translation) {
-                    element.textContent = translation;
-                }
-            });
-        }
+      }
+    });
+  }
+  
+  // Initial check
+  checkScroll();
+  
+  // Check on scroll
+  window.addEventListener('scroll', checkScroll);
+});
