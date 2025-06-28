@@ -161,11 +161,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Show success message
       const successMessage = document.createElement("div");
-      successMessage.innerHTML = `
-                        <div style="background: #4CAF50; color: white; padding: 1rem; border-radius: 5px; margin-top: 1rem;">
-                            <i class="fas fa-check-circle"></i> Thank you for your message! I will get back to you within 24 hours.
-                        </div>
-                    `;
+      const currentLang = localStorage.getItem('language') || 'en';
+      
+      if(currentLang === 'en') {
+        successMessage.innerHTML = `
+          <div style="background: #4CAF50; color: white; padding: 1rem; border-radius: 5px; margin-top: 1rem;">
+            <i class="fas fa-check-circle"></i> Thank you for your message! I will get back to you within 24 hours.
+          </div>
+        `;
+      } else {
+        successMessage.innerHTML = `
+          <div style="background: #4CAF50; color: white; padding: 1rem; border-radius: 5px; margin-top: 1rem;">
+            <i class="fas fa-check-circle"></i> तपाईंको सन्देशको लागि धन्यवाद! म २४ घण्टाभित्र तपाईंलाई फिर्ता सम्पर्क गर्नेछु।
+          </div>
+        `;
+      }
+      
       contactForm.appendChild(successMessage);
 
       // Reset form
@@ -183,8 +194,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set current year in footer
   const yearElem = document.getElementById("year");
+  const yearElemNp = document.getElementById("year-np");
+  const currentYear = new Date().getFullYear();
+  
   if (yearElem) {
-    yearElem.textContent = new Date().getFullYear();
+    yearElem.textContent = currentYear;
+  }
+  if (yearElemNp) {
+    yearElemNp.textContent = currentYear;
   }
 
   // FAQ Accordion Functionality
@@ -261,7 +278,17 @@ document.addEventListener("DOMContentLoaded", function () {
       elementsToTranslate.forEach(element => {
           const translation = element.getAttribute(`data-${lang}`);
           if (translation) {
-              element.textContent = translation;
+              // Check if the element is an input placeholder
+              if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                  element.placeholder = translation;
+              } else {
+                  // Handle HTML content in translations
+                  if (translation.includes('<') && translation.includes('>')) {
+                      element.innerHTML = translation;
+                  } else {
+                      element.textContent = translation;
+                  }
+              }
           }
       });
   }

@@ -845,7 +845,7 @@ img {
 }
 
 .form-group textarea {
-  height: 80px;
+  height: 120px;
   resize: vertical;
 }
 
@@ -942,7 +942,7 @@ footer {
 
 .footer-bottom {
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9rem;
   color: white;
