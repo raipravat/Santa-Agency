@@ -21,7 +21,7 @@
           <div class="header-name" data-en="Santa Bahadur Tamang Agency" data-np="सन्त बहादुर तामाङ एजेन्सी">Santa Bahadur Tamang Agency</div>
           <div class="header-contact">
             <a href="tel:+9779841234567" class="contact-link">
-              <i class="fas fa-phone-alt"></i> +977 9841234567
+              <i class="fas fa-phone-alt"></i> +977-9841234567
             </a>
             <a href="https://wa.me/9779841234567" class="contact-link whatsapp">
               <i class="fab fa-whatsapp"></i> <span data-en="WhatsApp" data-np="व्हाट्सएप">WhatsApp</span>
@@ -578,10 +578,7 @@
             </div>
           </div>
           <div class="footer-bottom">
-            <p data-en="&copy; <span id='year'></span> Santa Bahadur Tamang Insurance Agency. All rights reserved. Insurance products are offered through licensed providers. Registration No: INS-NP-2008-04567" 
-               data-np="&copy; <span id='year-np'></span> सन्त बहादुर तामाङ बिमा एजेन्सी। सर्वाधिकार सुरक्षित। बिमा उत्पादहरू लाइसेन्स प्राप्त प्रदायकहरू मार्फत पेश गरिन्छ। दर्ता नं: INS-NP-2008-04567">
-              &copy; <span id="year"></span> Santa Bahadur Tamang Insurance Agency. All rights reserved. Insurance products are offered through licensed providers. Registration No: INS-NP-2008-04567
-            </p>
+            © 2024 - <span id="copyright-year"></span> Santa Bahadur Tamang Insurance Agency. All rights reserved. Insurance products are offered through licensed providers.
           </div>
         </div>
       </footer>
@@ -596,6 +593,9 @@
       </button>
 
       <script src="js/main.js"></script>
+      <script>
+       document.getElementById('copyright-year').textContent = new Date().getFullYear();
+      </script>
     </body>
   </head>
 </html>

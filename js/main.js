@@ -192,18 +192,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Set current year in footer
-  const yearElem = document.getElementById("year");
-  const yearElemNp = document.getElementById("year-np");
-  const currentYear = new Date().getFullYear();
-  
-  if (yearElem) {
-    yearElem.textContent = currentYear;
-  }
-  if (yearElemNp) {
-    yearElemNp.textContent = currentYear;
-  }
-
   // FAQ Accordion Functionality
   const faqItems = document.querySelectorAll(".faq-item");
 
